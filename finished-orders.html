@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/slick.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+
+    <title>Beeyor</title>
+</head>
+
+<body>
+
+    <header class="fixed-top">
+        <nav class="es-main-nav navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="es-navbar-wrapper d-flex align-items-center justify-content-between w-100">
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/main-nav-logo.svg" alt="Beeyor">
+                        </a>
+                        <form class="es-search-container">
+                            <img src="img/ic-search.svg" alt="">
+                            <input type="search" placeholder="Поиск ресторанов и блюд">
+                            <button class="es-search-btn">Найти</button>
+                        </form>
+                        <button class="btn es-nav-location my-2 my-lg-0 d-flex align-items-center" type="button"
+                            data-target="#restoransMapModal" data-toggle="modal">
+                            <img class="mr-1" src="img/ic-location.svg" alt="">
+                            <p class="mb-0">Ул.&nbsp;Лохути</p>
+                        </button>
+                    </div>
+                    <div class="d-flex">
+                        <div class="es-nav-number-container d-flex align-items-center">
+                            <img class="es-nav-number-ic mr-3" src="img/ic-phone.svg" alt="">
+                            <a href="tel:9900" class="es-nav-number mb-0">9900</a>
+                        </div>
+                        <ul class="navbar-nav sm-hide">
+                            <li class="nav-item dropdown mr-5">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                                    id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img class="mr-2" src="img/ic-globe.svg" alt="">
+                                    <p class="mb-0">Рус</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">O'zbekcha</a>
+                                    <a class="dropdown-item" href="#">English</a>
+                                </div>
+                            </li>
+                            <li class="nav-item mr-4">
+                                <a class="nav-link" href="restorans-page.html">
+                                    <span class="nav-icon">
+                                        <img alt="Search" src="img/ic-shopping-cart.svg">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item mr-4">
+                                <a class="nav-link" href="favourite.html" title="Профиль" data-target="#rateService"
+                                    data-toggle="modal">
+                                    <span class="nav-icon">
+                                        <img alt="favourite" src="img/heart.svg">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item es-cart-block">
+                                <button class="nav-link btn" data-target="#enterProfile" data-toggle="modal"
+                                    type="button">
+                                    <span class="nav-icon">
+                                        <img alt="Cart" src="img/ic-profile.svg">
+                                    </span>
+                                    <span class="badge badge-cart"></span>
+                                </button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="main-mobile-nav">
+            <div class="container">
+                <div class="main-mobile-nav-wrapper d-flex justify-content-between">
+                    <button class="btn"><img src="img/search-black.svg" alt=""></button>
+                    <a class="dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="mr-2" src="img/ic-globe.svg" alt="">
+                        <p class="mb-0">Рус</p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">O'zbekcha</a>
+                        <a class="dropdown-item" href="#">English</a>
+                    </div>
+                    <button class="btn es-nav-location d-flex align-items-center" type="button"
+                        data-target="#mobRestoransMapModal" data-toggle="modal">
+                        <img class="mr-1" src="img/ic-location.svg" alt="">
+                        <p class="mb-0">Ул. Лохути</p>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section-after-nav">
+        <div class="container">
+            <h2 class="es-section-header section-header">Профиль</h2>
+            <div class="es-finished-orders-wrapper row d-flex justify-content-between">
+                <div class="col-lg-4">
+                    <div class="finished-order-logo-container">
+                        <img src="img/footer-logo.svg" alt="">
+                        <p>Терентьев Иван</p>
+                    </div>
+                    <div class="es-personal-info">
+                        <h4 class="es-personal-info-header">Личные данные</h4>
+                        <p class="personal-info-property">дата рождения:</p>
+                        <p class="personal-info-value">05.06.1995</p>
+                        <p class="personal-info-property">Номер телефона:</p>
+                        <p class="personal-info-value">+99890 990 90 90</p>
+                        <p class="personal-info-property">Дата регистрации:</p>
+                        <p class="personal-info-value">30.04.2022</p>
+                        <a href="#" class="es-log-out"><u>Выйти</u></a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="es-sub-header">История заказов</div>
+                    <div class="history-orders-btns">
+                        <button class="btn active-order-btn">Активные</button>
+                        <button class="btn finished-orders-btn">Завершенные</button>
+                    </div>
+
+                    <table class="table previous-orders-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">№</th>
+                                <th scope="col">Дата</th>
+                                <th scope="col">Способ оплаты</th>
+                                <th scope="col">Статус</th>
+                                <th scope="col">Сумма</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="order-id">548648</td>
+                                <td>11.12.2021</td>
+                                <td>Наличные</td>
+                                <td class="order-status">Закрыт</td>
+                                <td>50 сом</td>
+                            </tr>
+                            <tr>
+                                <td class="order-id">484589</td>
+                                <td>04.09.2021</td>
+                                <td>Корти Милли</td>
+                                <td class="order-status">Закрыт</td>
+                                <td>34 сом</td>
+                            </tr>
+                            <tr>
+                                <td class="order-id">845687</td>
+                                <td>11.01.2021</td>
+                                <td>Visa</td>
+                                <td class="order-status">Закрыт</td>
+                                <td>75 сом</td>
+                            </tr>
+                            <tr>
+                                <td class="order-id">984829</td>
+                                <td>14.08.2021</td>
+                                <td>MasterCard</td>
+                                <td class="order-status">Закрыт</td>
+                                <td>68 сом</td>
+                            </tr>
+                            <tr>
+                                <td class="order-id">912987</td>
+                                <td>23.05.2021</td>
+                                <td>Корти Милли</td>
+                                <td class="order-status">Закрыт</td>
+                                <td>45 сом</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mob-previous-table">
+                        <div class="mob-previous-order">
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>№</p>
+                                <p class="order-id">548648</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Дата</p>
+                                <p>11.12.2021</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Способ оплаты</p>
+                                <p>Наличные</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Статус</p>
+                                <p class="order-status">Закрыт</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Сумма</p>
+                                <p>50 сом</p>
+                            </div>
+                        </div>
+                        <div class="mob-previous-order">
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>№</p>
+                                <p class="order-id">548648</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Дата</p>
+                                <p>11.12.2021</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Способ оплаты</p>
+                                <p>Наличные</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Статус</p>
+                                <p class="order-status">Закрыт</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Сумма</p>
+                                <p>50 сом</p>
+                            </div>
+                        </div>
+                        <div class="mob-previous-order">
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>№</p>
+                                <p class="order-id">548648</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Дата</p>
+                                <p>11.12.2021</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Способ оплаты</p>
+                                <p>Наличные</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Статус</p>
+                                <p class="order-status">Закрыт</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Сумма</p>
+                                <p>50 сом</p>
+                            </div>
+                        </div>
+                        <div class="mob-previous-order">
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>№</p>
+                                <p class="order-id">548648</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Дата</p>
+                                <p>11.12.2021</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Способ оплаты</p>
+                                <p>Наличные</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Статус</p>
+                                <p class="order-status">Закрыт</p>
+                            </div>
+                            <div class="previous-order-row d-flex justify-content-between">
+                                <p>Сумма</p>
+                                <p>50 сом</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer w-100">
+        <div class="container">
+            <div class="footer-logo-container">
+                <div class="footer-logo">
+                    <img src="img/footer-logo.svg" alt="">
+                </div>
+                <div class="app-download-container">
+                    <img class="app-store-img" src="img/app-store.svg" alt="">
+                    <img src="img/play-market.svg" alt="">
+                </div>
+            </div>
+            <div class="footer-main-part flex-wrap">
+                <div class="es-footer-part">
+                    <h4 class="es-sub-header">Часто смотрят</h4>
+                    <div class="footer-lists-container">
+                        <ul class="footer-list list-unstyled footer-list-mr">
+                            <li class="footer-list-item"><a href="#">Национальная</a></li>
+                            <li class="footer-list-item"><a href="#">Fast Food</a></li>
+                            <li class="footer-list-item"><a href="#">Азиатская</a></li>
+                            <li class="footer-list-item"><a href="#">Кофейня</a></li>
+                            <li class="footer-list-item"><a href="#">Европейская</a></li>
+                            <li class="footer-list-item"><a href="#">Правильное питание</a></li>
+                            <li class="footer-list-item"><a href="#">Пиццерия</a></li>
+                        </ul>
+                        <ul class="footer-list list-unstyled">
+                            <li class="footer-list-item"><a href="#">Выпечка</a></li>
+                            <li class="footer-list-item"><a href="#">Ход-дог</a></li>
+                            <li class="footer-list-item"><a href="#">Сэндвич</a></li>
+                            <li class="footer-list-item"><a href="#">Завтраки</a></li>
+                            <li class="footer-list-item"><a href="#">Вок</a></li>
+                            <li class="footer-list-item"><a href="#">Салаты</a></li>
+                            <li class="footer-list-item"><a href="#">Суши</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="es-footer-part">
+                    <h4 class="es-sub-header text-right">Часто смотрят</h4>
+                    <ul class="footer-list list-unstyled text-right">
+                        <li class="footer-list-item"><a href="about.html">О нас</a></li>
+                        <li class="footer-list-item"><a href="info-restorans.html">Рестораны</a></li>
+                        <li class="footer-list-item"><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+                        <li class="footer-list-item"><a href="terms-of-use.html">Правила пользования</a></li>
+                        <li class="footer-list-item"><a href="carrier.html">Стать курьером</a></li>
+                        <li class="footer-list-item"><a href="coworking.html">Стать партнером</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="second-footer">
+        <div class="container">
+            <div class="second-footer-wrapper row w-100 d-flex justify-content-between m-0">
+                <div class="second-footer-row col-lg-5 p-lg-0">©2022 beeyor. Все права защищены.</div>
+                <div class="second-footer-row footer-media col-lg-2 d-flex justify-content-around">
+                    <a href="#"><img src="img/ic-facebook.svg" alt=""></a>
+                    <a href="#"><img src="img/ic-telegram.svg" alt=""></a>
+                    <a href="#"><img src="img/ic-instagram.svg" alt=""></a>
+                </div>
+                <div class="second-footer-row col-lg-5 p-lg-0 text-right">
+                    <span>Сайт разработан в</span> <a href="#"><u>Zetta Online</u></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <nav class="mob-fixed-bottom-nav position-fixed w-100">
+        <div class="container">
+            <div class="mob-fixed-nav d-flex justify-content-between">
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/home-2.svg" alt="">
+                    <p class="m-0">Главная</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/ic-shopping-cart.svg" alt="">
+                    <p class="m-0">Корзина</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/heart.svg" alt="">
+                    <p class="m-0">Избранное</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/ic-profile.svg" alt="">
+                    <p class="m-0">Аккаунт</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <a href="#top" id="back-top">
+        <img alt="To Top" src="img/ic_top.svg" />
+    </a>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

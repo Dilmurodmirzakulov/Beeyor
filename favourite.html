@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/slick.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+
+    <title>Beeyor</title>
+</head>
+
+<body>
+
+    <header class="fixed-top">
+        <nav class="es-main-nav navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="es-navbar-wrapper d-flex align-items-center justify-content-between w-100">
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/main-nav-logo.svg" alt="Beeyor">
+                        </a>
+                        <button class="es-nav-padding navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <form class="es-search-container">
+                            <img src="img/ic-search.svg" alt="">
+                            <input type="search" placeholder="Поиск ресторанов и блюд">
+                            <button class="es-search-btn">Найти</button>
+                        </form>
+                        <div class="es-nav-location my-2 my-lg-0 d-flex align-items-center">
+                            <img class="mr-1" src="img/ic-location.svg" alt="">
+                            <p class="mb-0">Ул. Лохути</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="es-nav-number-container d-flex align-items-center">
+                            <img class="es-nav-number-ic mr-3" src="img/ic-phone.svg" alt="">
+                            <a href="tel:9900" class="es-nav-number mb-0">9900</a>
+                        </div>
+                        <ul class="navbar-nav sm-hide">
+                            <li class="nav-item dropdown mr-5">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                                    id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img class="mr-2" src="img/ic-globe.svg" alt="">
+                                    <p class="mb-0">Рус</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">O'zbekcha</a>
+                                    <a class="dropdown-item" href="#">English</a>
+                                </div>
+                            </li>
+                            <li class="nav-item mr-4">
+                                <a class="nav-link" href="#">
+                                    <span class="nav-icon">
+                                        <img alt="Search" src="img/ic-shopping-cart.svg">
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item mr-4">
+                                <a class="nav-link" data-target="#authModal" data-toggle="modal" href="#"
+                                    title="Профиль">
+                                    <span class="nav-icon">
+                                        <img alt="Профиль" src="img/heart.svg">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item es-cart-block">
+                                <a class="nav-link" href="#">
+                                    <span class="nav-icon">
+                                        <img alt="Cart" src="img/ic-profile.svg">
+                                    </span>
+                                    <span class="badge badge-cart"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="favourite-section">
+        <div class="container">
+            <h2 class="es-section-header favourities-pl">Избранное</h2>
+            <div class="es-restorant-favourites">
+                <h4 class="es-sub-header favourities-pl">Ресторан “Якитория”</h4>
+                <div class="favourite-products-list">
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="es-restorant-favourites fevourities-second-list">
+                <h4 class="es-sub-header favourities-pl">Ресторан “Лагман Хаус”</h4>
+                <div class="favourite-products-list">
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer w-100">
+        <div class="container">
+            <div class="footer-logo-container">
+                <div class="footer-logo">
+                    <img src="img/footer-logo.svg" alt="">
+                </div>
+                <div class="app-download-container">
+                    <img class="app-store-img" src="img/app-store.svg" alt="">
+                    <img src="img/play-market.svg" alt="">
+                </div>
+            </div>
+            <div class="footer-main-part">
+                <div class="es-footer-part">
+                    <h4 class="es-sub-header">Часто смотрят</h4>
+                    <div class="footer-lists-container">
+                        <ul class="footer-list list-unstyled footer-list-mr">
+                            <li class="footer-list-item"><a href="#">Национальная</a></li>
+                            <li class="footer-list-item"><a href="#">Fast Food</a></li>
+                            <li class="footer-list-item"><a href="#">Азиатская</a></li>
+                            <li class="footer-list-item"><a href="#">Кофейня</a></li>
+                            <li class="footer-list-item"><a href="#">Европейская</a></li>
+                            <li class="footer-list-item"><a href="#">Правильное питание</a></li>
+                            <li class="footer-list-item"><a href="#">Пиццерия</a></li>
+                        </ul>
+                        <ul class="footer-list list-unstyled">
+                            <li class="footer-list-item"><a href="#">Выпечка</a></li>
+                            <li class="footer-list-item"><a href="#">Ход-дог</a></li>
+                            <li class="footer-list-item"><a href="#">Сэндвич</a></li>
+                            <li class="footer-list-item"><a href="#">Завтраки</a></li>
+                            <li class="footer-list-item"><a href="#">Вок</a></li>
+                            <li class="footer-list-item"><a href="#">Салаты</a></li>
+                            <li class="footer-list-item"><a href="#">Суши</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="es-footer-part">
+                    <h4 class="es-sub-header text-right">Часто смотрят</h4>
+                    <ul class="footer-list list-unstyled text-right">
+                        <li class="footer-list-item"><a href="#">О нас</a></li>
+                        <li class="footer-list-item"><a href="#">Рестораны</a></li>
+                        <li class="footer-list-item"><a href="#">Политика конфиденциальности</a></li>
+                        <li class="footer-list-item"><a href="#">Правила пользования</a></li>
+                        <li class="footer-list-item"><a href="#">Стать курьером</a></li>
+                        <li class="footer-list-item"><a href="#">Стать партнером</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="second-footer">
+        <div class="container">
+            <div class="row w-100 d-flex justify-content-between m-0">
+                <div class="col-5 p-0">©2022 beeyor. Все права защищены.</div>
+                <div class="col-2 d-flex justify-content-around">
+                    <a href="#"><img src="img/ic-facebook.svg" alt=""></a>
+                    <a href="#"><img src="img/ic-telegram.svg" alt=""></a>
+                    <a href="#"><img src="img/ic-instagram.svg" alt=""></a>
+                </div>
+                <div class="col-5 p-0 text-right">
+                    Сайт разработан в <a href="#"><u>Zetta Online</u></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" id="back-top">
+        <img alt="To Top" src="img/ic_top.svg" />
+    </a>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

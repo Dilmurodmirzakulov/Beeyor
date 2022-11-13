@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/slick.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+
+    <title>Beeyor</title>
+</head>
+
+<body>
+
+    <header class="fixed-top">
+        <nav class="es-main-nav navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="es-navbar-wrapper d-flex align-items-center justify-content-between w-100">
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/main-nav-logo.svg" alt="Beeyor">
+                        </a>
+                        <form class="es-search-container">
+                            <img src="img/ic-search.svg" alt="">
+                            <input type="search" placeholder="Поиск ресторанов и блюд">
+                            <button class="es-search-btn">Найти</button>
+                        </form>
+                        <button class="btn es-nav-location my-2 my-lg-0 d-flex align-items-center" type="button"
+                            data-target="#restoransMapModal" data-toggle="modal">
+                            <img class="mr-1" src="img/ic-location.svg" alt="">
+                            <p class="mb-0">Ул.&nbsp;Лохути</p>
+                        </button>
+                    </div>
+                    <div class="d-flex">
+                        <div class="es-nav-number-container d-flex align-items-center">
+                            <img class="es-nav-number-ic mr-3" src="img/ic-phone.svg" alt="">
+                            <a href="tel:9900" class="es-nav-number mb-0">9900</a>
+                        </div>
+                        <ul class="navbar-nav sm-hide">
+                            <li class="nav-item dropdown mr-5">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                                    id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img class="mr-2" src="img/ic-globe.svg" alt="">
+                                    <p class="mb-0">Рус</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">O'zbekcha</a>
+                                    <a class="dropdown-item" href="#">English</a>
+                                </div>
+                            </li>
+                            <li class="nav-item mr-4">
+                                <a class="nav-link" href="restorans-page.html">
+                                    <span class="nav-icon">
+                                        <img alt="Search" src="img/ic-shopping-cart.svg">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item mr-4">
+                                <a class="nav-link" href="favourite.html" title="Профиль" data-target="#rateService"
+                                    data-toggle="modal">
+                                    <span class="nav-icon">
+                                        <img alt="favourite" src="img/heart.svg">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item es-cart-block">
+                                <button class="nav-link btn" data-target="#enterProfile" data-toggle="modal"
+                                    type="button">
+                                    <span class="nav-icon">
+                                        <img alt="Cart" src="img/ic-profile.svg">
+                                    </span>
+                                    <span class="badge badge-cart"></span>
+                                </button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="main-mobile-nav">
+            <div class="container">
+                <div class="main-mobile-nav-wrapper d-flex justify-content-between">
+                    <button class="btn"><img src="img/search-black.svg" alt=""></button>
+                    <a class="dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="mr-2" src="img/ic-globe.svg" alt="">
+                        <p class="mb-0">Рус</p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">O'zbekcha</a>
+                        <a class="dropdown-item" href="#">English</a>
+                    </div>
+                    <button class="btn es-nav-location d-flex align-items-center" type="button"
+                        data-target="#mobRestoransMapModal" data-toggle="modal">
+                        <img class="mr-1" src="img/ic-location.svg" alt="">
+                        <p class="mb-0">Ул. Лохути</p>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="es-order-status-header section-after-nav w-100">
+                <h2 class="es-section-header">Статус заказа</h2>
+                <a href="#" class="aside-back-button d-flex align-items-center es-mr-15">
+                    <img src="img/arrow-left.svg" alt="">&nbsp;
+                    <span class="es-font-medium">Назад</span>
+                </a>
+            </div>
+            <div class="row order-status-wrapper d-flex justify-content-between">
+                <div class="order-status-container col-lg-8">
+                    <h3 class="es-sub-header">Заказ номер <span class="main-color">548648</span> от 15.10.2022</h3>
+                    <div class="position-relative">
+                        <div class="progress-bar-ic position-absolute">
+                            <img src="img/ic-shopping-cart.svg" alt="">
+                        </div>
+                        <div class="progress-bar"></div>
+                    </div>
+                    <p class="progress-desc">Ваш заказ передан заведению</p>
+                    <div class="delivery-address">
+                        <h3 class="es-sub-header">Адрес доставки</h3>
+                        <p class="m-0">Ул. Лохути, район 55-Б</p>
+                    </div>
+                    <div class="order-payment">
+                        <h3 class="es-sub-header">Сумма к оплате</h3>
+                        <div class="payment-info-row">
+                            <div class="dotted-text-item left">Стоимость товара:</div>
+                            <div class="dotted-text-item right">325 сом</div>
+                            <div class="dotted-text-item dotted"></div>
+                        </div>
+                        <div class="payment-info-row">
+                            <div class="dotted-text-item left">Доставка:</div>
+                            <div class="dotted-text-item right">12 сом</div>
+                            <div class="dotted-text-item dotted"></div>
+                        </div>
+                        <div class="payment-info-row">
+                            <div class="dotted-text-item left">Одноразовая посуда:</div>
+                            <div class="dotted-text-item right">12 сом</div>
+                            <div class="dotted-text-item dotted"></div>
+                        </div>
+                    </div>
+                    <div class="row contact-with-operator-container">
+                        <a href="#" class="contact-with-operator order-1 order-lg-0 col-lg-9">Связаться с оператором</a>
+                        <div class="col-lg-3 text-lg-right es-font-medium order-0 order-lg-1 text-left">Итого: 339 сом
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 order-status-aside">
+                    <h4 class="es-sub-header order-status-aside-header">Ваш заказ</h4>
+                    <div class="aside-products-container">
+                        <div class="aside-product d-flex flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>1 x 15 сом = 15 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-product d-flex justify-content-between flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>2 x 15 сом = 30 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-product d-flex justify-content-between flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>1 x 15 сом = 15 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-product d-flex justify-content-between flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>1 x 15 сом = 15 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-product d-flex justify-content-between flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>1 x 15 сом = 15 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-product d-flex justify-content-between flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>1 x 15 сом = 15 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-product d-flex justify-content-between flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>1 x 15 сом = 15 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-product d-flex justify-content-between flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>1 x 15 сом = 15 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-product d-flex justify-content-between flex-column">
+                            <div class="d-flex w-100">
+                                <img src="img/aside-product.svg" alt="">
+                                <div
+                                    class="aside-product-info es-font-medium d-flex flex-column justify-content-around ml-4">
+                                    <p>Калифорния</p>
+                                    <p>1 x 15 сом = 15 сом</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer w-100">
+        <div class="container">
+            <div class="footer-logo-container">
+                <div class="footer-logo">
+                    <img src="img/footer-logo.svg" alt="">
+                </div>
+                <div class="app-download-container">
+                    <img class="app-store-img" src="img/app-store.svg" alt="">
+                    <img src="img/play-market.svg" alt="">
+                </div>
+            </div>
+            <div class="footer-main-part flex-wrap">
+                <div class="es-footer-part">
+                    <h4 class="es-sub-header">Часто смотрят</h4>
+                    <div class="footer-lists-container">
+                        <ul class="footer-list list-unstyled footer-list-mr">
+                            <li class="footer-list-item"><a href="#">Национальная</a></li>
+                            <li class="footer-list-item"><a href="#">Fast Food</a></li>
+                            <li class="footer-list-item"><a href="#">Азиатская</a></li>
+                            <li class="footer-list-item"><a href="#">Кофейня</a></li>
+                            <li class="footer-list-item"><a href="#">Европейская</a></li>
+                            <li class="footer-list-item"><a href="#">Правильное питание</a></li>
+                            <li class="footer-list-item"><a href="#">Пиццерия</a></li>
+                        </ul>
+                        <ul class="footer-list list-unstyled">
+                            <li class="footer-list-item"><a href="#">Выпечка</a></li>
+                            <li class="footer-list-item"><a href="#">Ход-дог</a></li>
+                            <li class="footer-list-item"><a href="#">Сэндвич</a></li>
+                            <li class="footer-list-item"><a href="#">Завтраки</a></li>
+                            <li class="footer-list-item"><a href="#">Вок</a></li>
+                            <li class="footer-list-item"><a href="#">Салаты</a></li>
+                            <li class="footer-list-item"><a href="#">Суши</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="es-footer-part">
+                    <h4 class="es-sub-header text-right">Часто смотрят</h4>
+                    <ul class="footer-list list-unstyled text-right">
+                        <li class="footer-list-item"><a href="#">О нас</a></li>
+                        <li class="footer-list-item"><a href="#">Рестораны</a></li>
+                        <li class="footer-list-item"><a href="#">Политика конфиденциальности</a></li>
+                        <li class="footer-list-item"><a href="#">Правила пользования</a></li>
+                        <li class="footer-list-item"><a href="#">Стать курьером</a></li>
+                        <li class="footer-list-item"><a href="#">Стать партнером</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="second-footer">
+        <div class="container">
+            <div class="second-footer-wrapper row w-100 d-flex justify-content-between m-0">
+                <div class="second-footer-row col-lg-5 p-lg-0">©2022 beeyor. Все права защищены.</div>
+                <div class="second-footer-row footer-media col-lg-2 d-flex justify-content-around">
+                    <a href="#"><img src="img/ic-facebook.svg" alt=""></a>
+                    <a href="#"><img src="img/ic-telegram.svg" alt=""></a>
+                    <a href="#"><img src="img/ic-instagram.svg" alt=""></a>
+                </div>
+                <div class="second-footer-row col-lg-5 p-lg-0 text-right">
+                    <span>Сайт разработан в</span> <a href="#"><u>Zetta Online</u></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <nav class="mob-fixed-bottom-nav position-fixed w-100">
+        <div class="container">
+            <div class="mob-fixed-nav d-flex justify-content-between">
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/home-2.svg" alt="">
+                    <p class="m-0">Главная</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/ic-shopping-cart.svg" alt="">
+                    <p class="m-0">Корзина</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/heart.svg" alt="">
+                    <p class="m-0">Избранное</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/ic-profile.svg" alt="">
+                    <p class="m-0">Аккаунт</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <a href="#top" id="back-top">
+        <img alt="To Top" src="img/ic_top.svg" />
+    </a>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js" type="text/javascript"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

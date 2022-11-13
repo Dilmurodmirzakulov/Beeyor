@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/slick.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/slick-theme.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/media.css" rel="stylesheet" />
+  <title>Beeyor</title>
+</head>
+
+<body>
+
+  <header class="fixed-top">
+    <nav class="es-main-nav navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <div class="es-navbar-wrapper d-flex align-items-center justify-content-between w-100">
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+              <img src="img/main-nav-logo.svg" alt="Beeyor">
+            </a>
+            <form class="es-search-container">
+              <img src="img/ic-search.svg" alt="">
+              <input type="search" placeholder="Поиск ресторанов и блюд">
+              <button class="es-search-btn">Найти</button>
+            </form>
+            <button class="btn es-nav-location my-2 my-lg-0 d-flex align-items-center" type="button"
+              data-target="#restoransMapModal" data-toggle="modal">
+              <img class="mr-1" src="img/ic-location.svg" alt="">
+              <p class="mb-0">Ул.&nbsp;Лохути</p>
+            </button>
+          </div>
+          <div class="d-flex">
+            <div class="es-nav-number-container d-flex align-items-center">
+              <img class="es-nav-number-ic mr-3" src="img/ic-phone.svg" alt="">
+              <a href="tel:9900" class="es-nav-number mb-0">9900</a>
+            </div>
+            <ul class="navbar-nav sm-hide">
+              <li class="nav-item dropdown mr-5">
+                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img class="mr-2" src="img/ic-globe.svg" alt="">
+                  <p class="mb-0">Рус</p>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">O'zbekcha</a>
+                  <a class="dropdown-item" href="#">English</a>
+                </div>
+              </li>
+              <li class="nav-item mr-4">
+                <a class="nav-link" href="restorans-page.html">
+                  <span class="nav-icon">
+                    <img alt="Search" src="img/ic-shopping-cart.svg">
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item mr-4">
+                <a class="nav-link" href="favourite.html" title="Профиль" data-target="#rateService" data-toggle="modal">
+                  <span class="nav-icon">
+                    <img alt="favourite" src="img/heart.svg">
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item es-cart-block">
+                <button class="nav-link btn" data-target="#enterProfile" data-toggle="modal" type="button">
+                  <span class="nav-icon">
+                    <img alt="Cart" src="img/ic-profile.svg">
+                  </span>
+                  <span class="badge badge-cart"></span>
+                </button>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="main-mobile-nav">
+      <div class="container">
+        <div class="main-mobile-nav-wrapper d-flex justify-content-between">
+          <button class="btn"><img src="img/search-black.svg" alt=""></button>
+          <a class="dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="mr-2" src="img/ic-globe.svg" alt="">
+            <p class="mb-0">Рус</p>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">O'zbekcha</a>
+            <a class="dropdown-item" href="#">English</a>
+          </div>
+          <button class="btn es-nav-location d-flex align-items-center" type="button"
+            data-target="#mobRestoransMapModal" data-toggle="modal">
+            <img class="mr-1" src="img/ic-location.svg" alt="">
+            <p class="mb-0">Ул. Лохути</p>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="es-main-slider">
+        <div class="es-main-slider-item">
+          <img class="es-bee" src="img/bee.svg" alt="">
+          <div class="es-main-slider-content">
+            <p class="es-slider-small">Хадамоти расонидаки</p>
+            <p class="es-slider-large">Служба доставки</p>
+            <p class="es-slider-small">Delivery service</p>
+          </div>
+        </div>
+        <div class="es-main-slider-item">
+          <img class="es-bee" src="img/bee.svg" alt="">
+          <div class="es-main-slider-content">
+            <p class="es-slider-small">Хадамоти расонидаки</p>
+            <p class="es-slider-large">Служба доставки</p>
+            <p class="es-slider-small">Delivery service</p>
+          </div>
+        </div>
+        <div class="es-main-slider-item">
+          <img class="es-bee" src="img/bee.svg" alt="">
+          <div class="es-main-slider-content">
+            <p class="es-slider-small">Хадамоти расонидаки</p>
+            <p class="es-slider-large">Служба доставки</p>
+            <p class="es-slider-small">Delivery service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="es-section-header">Заказать продукты</h2>
+      <div class="es-second-slider">
+        <div class="es-second-slider-item">
+          <div class="es-slider-logo-container">
+          </div>
+          <div class="es-second-slider-img"></div>
+        </div>
+        <div class="es-second-slider-item">
+          <div class="es-slider-logo-container">
+          </div>
+          <div class="es-second-slider-img"></div>
+        </div>
+        <div class="es-second-slider-item">
+          <div class="es-slider-logo-container">
+          </div>
+          <div class="es-second-slider-img"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container category-nav-container">
+      <h2 class="es-section-header">Категории</h2>
+      <div class="es-category-filter-nav">
+        <ul class="es-category-nav-list d-flex list-unstyled">
+          <li class="es-category-nav-item active">
+            <button class="btn">Все</button>
+          </li>
+          <li class="es-category-nav-item item-main-bg">
+            <button class="btn">Национальная</button>
+          </li>
+          <li class="es-category-nav-item">
+            <button class="btn">Европейская</button>
+          </li>
+          <li class="es-category-nav-item">
+            <button class="btn">Кондитерская</button>
+          </li>
+          <li class="es-category-nav-item">
+            <button class="btn">Fast&nbsp;Food</button>
+          </li>
+          <li class="es-category-nav-item">
+            <button class="btn">Здоровое&nbsp;питание</button>
+          </li>
+
+          <li class="es-category-nav-item es-category-show-all item-main-bg">
+            <button class="btn dropdown-toggle p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Еще</button>
+            <div class="dropdown-menu es-dropdown-menu-mt" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item first-item" href="#">Арабская</a>
+              <a class="dropdown-item" href="#">Грузинская</a>
+              <a class="dropdown-item" href="#">Индийская</a>
+              <a class="dropdown-item" href="#">Корейская</a>
+              <a class="dropdown-item" href="#">Осетинская</a>
+              <a class="dropdown-item last-item" href="#">Турецкая</a>
+            </div>
+          </li>
+          <span class="es-mob-category">
+            <li class="es-category-nav-item">
+              <button class="btn">Арабская</button>
+            </li>
+            <li class="es-category-nav-item">
+              <button class="btn">Грузинская</button>
+            </li>
+            <li class="es-category-nav-item">
+              <button class="btn">Индийская</button>
+            </li>
+          </span>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="es-section-header es-header-mt">Акции и скидки</h2>
+      <div class="es-sale-product-slider">
+        <div class="es-sale-product-slider-item">
+          <div class="es-sale-product-slider-photo">
+            <img class="img-fluid" src="img/sale-product.svg" alt="">
+          </div>
+          <div class="es-sale-product-info d-block">
+            <h5 class="es-sale-product-title">Плов Бародарон</h5>
+            <p class="es-product-category">Национальная</p>
+            <p>
+              <img src="img/ic-star.svg" alt="">
+              4,5 (129)
+            </p>
+          </div>
+          <div class="es-sale-ellips-bloks">
+            <div class="es-sale-ellips-block es-sale-ellips-block-white">
+              <div class="es-sale-ellips-block"></div>
+            </div>
+            <div class="es-sale-ellips-block es-sale-ellips-block-red">Скидка 20%</div>
+          </div>
+        </div>
+        <div class="es-sale-product-slider-item">
+          <div class="es-sale-product-slider-photo">
+            <img class="img-fluid" src="img/sale-product.svg" alt="">
+          </div>
+          <div class="es-sale-product-info d-block">
+            <h5 class="es-sale-product-title">Плов Бародарон</h5>
+            <p class="es-product-category">Национальная</p>
+            <p>
+              <img src="img/ic-star.svg" alt="">
+              4,5 (129)
+            </p>
+          </div>
+          <div class="es-sale-ellips-bloks">
+            <div class="es-sale-ellips-block es-sale-ellips-block-white">
+              <div class="es-sale-ellips-block"></div>
+            </div>
+            <div class="es-sale-ellips-block es-sale-ellips-block-red">Скидка 20%</div>
+          </div>
+        </div>
+        <div class="es-sale-product-slider-item">
+          <div class="es-sale-product-slider-photo">
+            <img class="img-fluid" src="img/sale-product.svg" alt="">
+          </div>
+          <div class="es-sale-product-info d-block">
+            <h5 class="es-sale-product-title">Плов Бародарон</h5>
+            <p class="es-product-category">Национальная</p>
+            <p>
+              <img src="img/ic-star.svg" alt="">
+              4,5 (129)
+            </p>
+          </div>
+          <div class="es-sale-ellips-bloks">
+            <div class="es-sale-ellips-block es-sale-ellips-block-white">
+              <div class="es-sale-ellips-block"></div>
+            </div>
+            <div class="es-sale-ellips-block es-sale-ellips-block-red">Скидка 20%</div>
+          </div>
+        </div>
+        <div class="es-sale-product-slider-item">
+          <div class="es-sale-product-slider-photo">
+            <img class="img-fluid" src="img/sale-product.svg" alt="">
+          </div>
+          <div class="es-sale-product-info d-block">
+            <h5 class="es-sale-product-title">Плов Бародарон</h5>
+            <p class="es-product-category">Национальная</p>
+            <p>
+              <img src="img/ic-star.svg" alt="">
+              4,5 (129)
+            </p>
+          </div>
+          <div class="es-sale-ellips-bloks">
+            <div class="es-sale-ellips-block es-sale-ellips-block-white">
+              <div class="es-sale-ellips-block"></div>
+            </div>
+            <div class="es-sale-ellips-block es-sale-ellips-block-red">Скидка 20%</div>
+          </div>
+        </div>
+        <div class="es-sale-product-slider-item">
+          <div class="es-sale-product-slider-photo">
+            <img class="img-fluid" src="img/sale-product.svg" alt="">
+          </div>
+          <div class="es-sale-product-info d-block">
+            <h5 class="es-sale-product-title">Плов Бародарон</h5>
+            <p class="es-product-category">Национальная</p>
+            <p>
+              <img src="img/ic-star.svg" alt="">
+              4,5 (129)
+            </p>
+          </div>
+          <div class="es-sale-ellips-bloks">
+            <div class="es-sale-ellips-block es-sale-ellips-block-white">
+              <div class="es-sale-ellips-block"></div>
+            </div>
+            <div class="es-sale-ellips-block es-sale-ellips-block-red">Скидка 20%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-list-section">
+    <div class="container">
+      <h2 class="es-section-header es-header-mt">Категории</h2>
+      <div class="product-list row">
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон< <!-- ModaModall -->
+                  <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog"
+                    aria-labelledby="registrationModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content es-modal-content-container">
+                        <div class="es-modal-header modal-header position-relative">
+                          <img src="img/footer-logo.svg" alt="">
+                          <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
+                            <img src="img/exit.svg" alt="">
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="position-relative es-modal-input-container">
+                            <input type="text" class="es-modal-indput" placeholder="Ваше имя">
+                            <img class="position-absolute modal-ic" src="img/modal-profile.svg" alt="">
+                          </div>
+                          <div class="position-relative es-modal-input-container">
+                            <input type="text" class="es-modal-indput" placeholder="Дата рождения">
+                            <img class="position-absolute modal-ic" src="img/calendar.svg" alt="">
+                          </div>
+                          <div class="position-relative es-modal-input-container">
+                            <input type="text" class="es-modal-indput" placeholder="+992 __ __ __ __">
+                            <img class="position-absolute modal-ic" src="img/call-calling.svg" alt="">
+                          </div>
+                          <div class="position-relative es-modal-input-container">
+                            <input type="text" class="es-modal-indput" placeholder="Введите код">
+                            <img class="position-absolute modal-ic" src="img/security.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn modal-footer-btn"
+                            data-dismiss="modal">Зарегистрироваться</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="enterProfile" tabindex="-1" role="dialog"
+                    aria-labelledby="enterProfileTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content es-modal-content-container">
+                        <div class="es-modal-header modal-header position-relative">
+                          <img src="img/footer-logo.svg" alt="">
+                          <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
+                            <img src="img/exit.svg" alt="">
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="position-relative es-modal-input-container">
+                            <input type="text" class="es-modal-indput" placeholder="+992 __ __ __ __">
+                            <img class="position-absolute modal-ic" src="img/call-calling.svg" alt="">
+                          </div>
+                          <div class="position-relative es-modal-input-container">
+                            <input type="text" class="es-modal-indput" placeholder="Введите код">
+                            <img class="position-absolute modal-ic" src="img/security.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn modal-footer-btn" data-dismiss="modal">Далее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Product view Modal -->
+                  <div class="modal fade" id="productView" tabindex="-1" aria-labelledby="productView"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content modal-dialog-scrollable">
+                        <div
+                          class="es-product-view-modal-header position-relative d-flex justify-content-between align-items-center">
+                          <h3 class="es-sub-header es-produt-header m-0">
+                            Гункан спайси эби
+                          </h3>
+                          <button class="btn es-product-modal-exit-btn position-absolute" data-dismiss="modal"><img
+                              src="img/exit.svg" alt=""></button>
+                          <img class="es-produt-header" src="img/empty-heart.svg" alt="">
+                        </div>
+                        <div class="es-product-view-modal-body">
+                          <div class="modal-product-info-container">
+                            <h4 class="modal-info-header es-font-medium">Описание:</h4>
+                            <p class="modal-product-desc">
+                              Безусловно, понимание сути ресурсосберегающих технологий создаёт предпосылки для
+                              своевременного выполнения сверхзадачи. Равным образом, базовый вектор развития говорит о
+                              возможностях дальнейших направлений развития.
+                            </p>
+                          </div>
+                          <div class="modal-product-type-container">
+                            <h4 class="modal-info-header es-font-medium">Дополнительно:</h4>
+                            <div class="modal-product-types">
+                              <div class="row">
+                                <div class="col-6">
+                                  <div class="input-container es-ptb-15">
+                                    <input class="input-radio" type="radio" name="addition" id="first-radio">
+                                    <label for="first-radio">Палочки 1шт <span class="gray-text">+ (0.00
+                                        сом)</span></label>
+                                  </div>
+                                  <div class="input-container es-ptb-15">
+                                    <input class="input-radio" type="radio" name="addition" id="second-radio" checked>
+                                    <label for="second-radio">Васаби <span class="gray-text">+ (5.00
+                                        сом)</span></label>
+                                  </div>
+                                  <div class="input-container es-ptb-15">
+                                    <input class="input-radio" type="radio" name="addition" id="third-radio" checked>
+                                    <label for="third-radio">Васаби <span class="gray-text">+ (5.00
+                                        сом)</span></label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="input-container es-ptb-15">
+                                    <input class="input-radio" type="radio" name="addition" id="fourth-radio">
+                                    <label for="fourth-radio">Соевый соус <span class="gray-text">+ (7.00
+                                        сом)</span></label>
+                                  </div>
+                                  <div class="input-container es-ptb-15">
+                                    <input class="input-radio" type="radio" name="addition" id="fifth-radio" checked>
+                                    <label for="fifth-radio">Имбирь <span class="gray-text">+ (5.00
+                                        сом)</span></label>
+                                  </div>
+                                  <div class="input-container es-ptb-15">
+                                    <input class="input-radio" type="radio" name="addition" id="sixth-radio" checked>
+                                    <label for="sixth-radio">Имбирь <span class="gray-text">+ (5.00
+                                        сом)</span></label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer product-modal-footer">
+                          <div class="product-modal-total">
+                            <span class="modal-sum-title">Сумма:</span>
+                            <span>15.00 сом</span>
+                          </div>
+                          <div class="product-modal-btns">
+                            <div class="aside-qty-btns d-flex align-items-center">
+                              <button class="btn es-decrement">-</button>
+                              <span>1</span>
+                              <button class="btn es-increment">+</button>
+                            </div>
+                            <button class="modal-product-add-btn btn">Добавить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="phoneNumber" tabindex="-1" role="dialog"
+                    aria-labelledby="phoneNumberTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content es-modal-content-container">
+                        <div class="es-modal-header modal-header position-relative">
+                          <img src="img/footer-logo.svg" alt="">
+                          <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
+                            <img src="img/exit.svg" alt="">
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="position-relative es-modal-input-container">
+                            <input type="text" class="es-modal-indput" placeholder="+992 __ __ __ __">
+                            <img class="position-absolute modal-ic" src="img/call-calling.svg" alt="">
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn modal-footer-btn" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="restoransMapModal" tabindex="-1" role="dialog"
+                    aria-labelledby="restoransMapModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content es-modal-content-container w-100">
+                        <div class="modal-header d-flex flex-column pb-0">
+                          <h3 class="es-sub-header m-0 mb-2">
+                            Гункан спайси эби
+                          </h3>
+                          <p class="mb-0">Укажите на карте или выберите вручную</p>
+                          <button class="btn es-product-modal-exit-btn position-absolute" data-dismiss="modal">
+                            <img src="img/exit.svg" alt="">
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="es-ptb-30">
+                            <form class="es-search-container w-100">
+                              <img src="img/ic-search.svg" alt="">
+                              <input type="search" placeholder="Поиск ресторанов и блюд">
+                              <button class="es-search-btn">Найти</button>
+                            </form>
+                          </div>
+                          <div style="width: 100%"><iframe style="border-radius: 10px" width="100%" height="374"
+                              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                              src="https://maps.google.com/maps?width=860&amp;height=300&amp;hl=en&amp;q=tashkent+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="mobRestoransMapModal" tabindex="-1" role="dialog"
+                    aria-labelledby="mobRestoransMapModalTitle" aria-hidden="true">
+                    <div class="modal-dialog m-0">
+                      <div class="modal-content mob-modal-content-container w-100">
+                        <div class="modal-body p-0 overflow-hidden">
+                          <button type="button" class="mob-map-exit-btn btn" data-dismiss="modal" aria-label="Close">
+                            <img src="img/exit-black.svg" alt="">
+                          </button>
+                          <div style="width: 100%; height: 100%"><iframe width="100%" height="100%" frameborder="0"
+                              scrolling="no" marginheight="0" marginwidth="0"
+                              src="https://maps.google.com/maps?width=860&amp;height=300&amp;hl=en&amp;q=tashkent+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe>
+                          </div>
+                          <button class="btn map-location-btn">
+                            <img src="img/ic-location.svg" alt="">
+                          </button>
+                          <div class="mob-map-modal-btns">
+                            <button class="btn mob-map-btn map-main-bg">Вручную</button>
+                            <button class="btn mob-map-btn map-main-color">Подтвердить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="rateService" tabindex="-1" aria-labelledby="rateServiceLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content es-modal-content-container">
+                        <div class="modal-body es-ptb-78 es-plr-120 rating-container position-relative">
+                          <button class="btn es-product-modal-exit-btn position-absolute" data-dismiss="modal">
+                            <img src="img/exit.svg" alt="">
+                          </button>
+                          <h3 class="es-sub-header text-center mb-2">Оцените качество сервиса?</h3>
+                          <p class="text-center mb-0">Нам важно узнать Ваше мнение. Это поможет нам <br>
+                            в дальнейшем развитии!</p>
+                          <div class="es-rating-buttons">
+                            <button class="btn es-rating-btn like-btn"><img src="img/like-white.svg" alt=""></button>
+                            <button class="btn es-rating-btn dislike-btn"><img src="img/dislike.svg" alt=""></button>
+                          </div>
+                          <button class="btn es-rating-result">Отправить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="restourantInfoModal" tabindex="-1"
+                    aria-labelledby="restourantInfoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content mob-animate-bottom animate-bottom">
+                        <div class="modal-header">
+                          <h3 class="es-banner-info-header">Якитория</h3>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img class="close-img" src="img/exit-black.svg" alt="">
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div>
+
+                            <p class="banner-dropdown-desc">
+                              Сеть культовых ресторанов авторской японской кухни…
+                            </p>
+                            <div class="banner-dropdown-row">
+                              <span class="property">Адрес:</span>&nbsp;&nbsp;&nbsp;
+                              <span class="value">Н.Махсум 77/5 А</span>
+                            </div>
+                            <div class="banner-dropdown-row">
+                              <span class="property">Доставка:</span>&nbsp;&nbsp;&nbsp;
+                              <span class="value">от 5 сом</span>
+                            </div>
+                            <div class="banner-dropdown-row">
+                              <span class="property">Мин. заказ:</span>&nbsp;&nbsp;&nbsp;
+                              <span class="value">от 30 сом</span>
+                            </div>
+                            <div class="banner-dropdown-row border-0">
+                              <span class="property">Режим работы:</span>&nbsp;&nbsp;&nbsp;
+                              <span class="value">с 8:00 до 22:00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  /h5>
+                  <div class="d-flex justify-content-between">
+                    <p class="es-product-category">Национальная</p>
+                    <div>
+                      <img src="img/ic-star.svg" alt="">
+                      <span>4,5 (129)</span>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="es-product col-lg-3">
+          <div class="es-product-wrapper">
+            <div class="es-product-photo">
+              <img class="img-fluid" src="img/product.svg" alt="">
+              <div class="es-ellips-bloks">
+                <div class="es-ellips-block es-ellips-block-transparent">
+                  <div class="es-ellips-block"></div>
+                </div>
+                <div class="es-ellips-block es-ellips-block-gray">Скидка 20%</div>
+              </div>
+            </div>
+            <div class="es-product-info d-block">
+              <h5 class="es-product-title">Плов Бародарон</h5>
+              <div class="d-flex justify-content-between">
+                <p class="es-product-category">Национальная</p>
+                <div>
+                  <img src="img/ic-star.svg" alt="">
+                  <span>4,5 (129)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer w-100">
+    <div class="container">
+      <div class="footer-logo-container">
+        <div class="footer-logo">
+          <img src="img/footer-logo.svg" alt="">
+        </div>
+        <div class="app-download-container">
+          <img class="app-store-img" src="img/app-store.svg" alt="">
+          <img src="img/play-market.svg" alt="">
+        </div>
+      </div>
+      <div class="footer-main-part flex-wrap">
+        <div class="es-footer-part">
+          <h4 class="es-sub-header">Часто смотрят</h4>
+          <div class="footer-lists-container">
+            <ul class="footer-list list-unstyled footer-list-mr">
+              <li class="footer-list-item"><a href="#">Национальная</a></li>
+              <li class="footer-list-item"><a href="#">Fast Food</a></li>
+              <li class="footer-list-item"><a href="#">Азиатская</a></li>
+              <li class="footer-list-item"><a href="#">Кофейня</a></li>
+              <li class="footer-list-item"><a href="#">Европейская</a></li>
+              <li class="footer-list-item"><a href="#">Правильное питание</a></li>
+              <li class="footer-list-item"><a href="#">Пиццерия</a></li>
+            </ul>
+            <ul class="footer-list list-unstyled">
+              <li class="footer-list-item"><a href="#">Выпечка</a></li>
+              <li class="footer-list-item"><a href="#">Ход-дог</a></li>
+              <li class="footer-list-item"><a href="#">Сэндвич</a></li>
+              <li class="footer-list-item"><a href="#">Завтраки</a></li>
+              <li class="footer-list-item"><a href="#">Вок</a></li>
+              <li class="footer-list-item"><a href="#">Салаты</a></li>
+              <li class="footer-list-item"><a href="#">Суши</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="es-footer-part">
+          <h4 class="es-sub-header text-right">Часто смотрят</h4>
+          <ul class="footer-list list-unstyled text-right">
+            <li class="footer-list-item"><a href="about.html">О нас</a></li>
+            <li class="footer-list-item"><a href="info-restorans.html">Рестораны</a></li>
+            <li class="footer-list-item"><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+            <li class="footer-list-item"><a href="terms-of-use.html">Правила пользования</a></li>
+            <li class="footer-list-item"><a href="carrier.html">Стать курьером</a></li>
+            <li class="footer-list-item"><a href="coworking.html">Стать партнером</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer class="second-footer">
+    <div class="container">
+      <div class="second-footer-wrapper row w-100 d-flex justify-content-between m-0">
+        <div class="second-footer-row col-lg-5 p-lg-0">©2022 beeyor. Все права защищены.</div>
+        <div class="second-footer-row footer-media col-lg-2 d-flex justify-content-around">
+          <a href="#"><img src="img/ic-facebook.svg" alt=""></a>
+          <a href="#"><img src="img/ic-telegram.svg" alt=""></a>
+          <a href="#"><img src="img/ic-instagram.svg" alt=""></a>
+        </div>
+        <div class="second-footer-row col-lg-5 p-lg-0 text-right">
+          <span>Сайт разработан в</span> <a href="#"><u>Zetta Online</u></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <nav class="mob-fixed-bottom-nav position-fixed w-100">
+    <div class="container">
+      <div class="mob-fixed-nav d-flex justify-content-between">
+        <a class="d-flex flex-column align-items-center" href="#">
+          <img src="img/home-2.svg" alt="">
+          <p class="m-0">Главная</p>
+        </a>
+        <a class="d-flex flex-column align-items-center" href="#">
+          <img src="img/ic-shopping-cart.svg" alt="">
+          <p class="m-0">Корзина</p>
+        </a>
+        <a class="d-flex flex-column align-items-center" href="#">
+          <img src="img/heart.svg" alt="">
+          <p class="m-0">Избранное</p>
+        </a>
+        <a class="d-flex flex-column align-items-center" href="#">
+          <img src="img/ic-profile.svg" alt="">
+          <p class="m-0">Аккаунт</p>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <a href="#top" id="back-top">
+    <img alt="To Top" src="img/ic_top.svg" />
+  </a>
+
+
+  <!-- ModaModall -->
+  <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content es-modal-content-container">
+        <div class="es-modal-header modal-header position-relative">
+          <img src="img/footer-logo.svg" alt="">
+          <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
+            <img src="img/exit.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="position-relative es-modal-input-container">
+            <input type="text" class="es-modal-indput" placeholder="Ваше имя">
+            <img class="position-absolute modal-ic" src="img/modal-profile.svg" alt="">
+          </div>
+          <div class="position-relative es-modal-input-container">
+            <input type="text" class="es-modal-indput" placeholder="Дата рождения">
+            <img class="position-absolute modal-ic" src="img/calendar.svg" alt="">
+          </div>
+          <div class="position-relative es-modal-input-container">
+            <input type="text" class="es-modal-indput" placeholder="+992 __ __ __ __">
+            <img class="position-absolute modal-ic" src="img/call-calling.svg" alt="">
+          </div>
+          <div class="position-relative es-modal-input-container">
+            <input type="text" class="es-modal-indput" placeholder="Введите код">
+            <img class="position-absolute modal-ic" src="img/security.svg" alt="">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn modal-footer-btn" data-dismiss="modal">Зарегистрироваться</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="enterProfile" tabindex="-1" role="dialog" aria-labelledby="enterProfileTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content es-modal-content-container">
+        <div class="es-modal-header modal-header position-relative">
+          <img src="img/footer-logo.svg" alt="">
+          <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
+            <img src="img/exit.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="position-relative es-modal-input-container">
+            <input type="text" class="es-modal-indput" placeholder="+992 __ __ __ __">
+            <img class="position-absolute modal-ic" src="img/call-calling.svg" alt="">
+          </div>
+          <div class="position-relative es-modal-input-container">
+            <input type="text" class="es-modal-indput" placeholder="Введите код">
+            <img class="position-absolute modal-ic" src="img/security.svg" alt="">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn modal-footer-btn" data-dismiss="modal">Далее</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product view Modal -->
+  <div class="modal fade" id="productView" tabindex="-1" aria-labelledby="productView" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content modal-dialog-scrollable">
+        <div class="es-product-view-modal-header position-relative d-flex justify-content-between align-items-center">
+          <h3 class="es-sub-header es-produt-header m-0">
+            Гункан спайси эби
+          </h3>
+          <button class="btn es-product-modal-exit-btn position-absolute" data-dismiss="modal"><img src="img/exit.svg"
+              alt=""></button>
+          <img class="es-produt-header" src="img/empty-heart.svg" alt="">
+        </div>
+        <div class="es-product-view-modal-body">
+          <div class="modal-product-info-container">
+            <h4 class="modal-info-header es-font-medium">Описание:</h4>
+            <p class="modal-product-desc">
+              Безусловно, понимание сути ресурсосберегающих технологий создаёт предпосылки для
+              своевременного выполнения сверхзадачи. Равным образом, базовый вектор развития говорит о
+              возможностях дальнейших направлений развития.
+            </p>
+          </div>
+          <div class="modal-product-type-container">
+            <h4 class="modal-info-header es-font-medium">Дополнительно:</h4>
+            <div class="modal-product-types">
+              <div class="row">
+                <div class="col-6">
+                  <div class="input-container es-ptb-15">
+                    <input class="input-radio" type="radio" name="addition" id="first-radio">
+                    <label for="first-radio">Палочки 1шт <span class="gray-text">+ (0.00
+                        сом)</span></label>
+                  </div>
+                  <div class="input-container es-ptb-15">
+                    <input class="input-radio" type="radio" name="addition" id="second-radio" checked>
+                    <label for="second-radio">Васаби <span class="gray-text">+ (5.00
+                        сом)</span></label>
+                  </div>
+                  <div class="input-container es-ptb-15">
+                    <input class="input-radio" type="radio" name="addition" id="third-radio" checked>
+                    <label for="third-radio">Васаби <span class="gray-text">+ (5.00
+                        сом)</span></label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="input-container es-ptb-15">
+                    <input class="input-radio" type="radio" name="addition" id="fourth-radio">
+                    <label for="fourth-radio">Соевый соус <span class="gray-text">+ (7.00
+                        сом)</span></label>
+                  </div>
+                  <div class="input-container es-ptb-15">
+                    <input class="input-radio" type="radio" name="addition" id="fifth-radio" checked>
+                    <label for="fifth-radio">Имбирь <span class="gray-text">+ (5.00
+                        сом)</span></label>
+                  </div>
+                  <div class="input-container es-ptb-15">
+                    <input class="input-radio" type="radio" name="addition" id="sixth-radio" checked>
+                    <label for="sixth-radio">Имбирь <span class="gray-text">+ (5.00
+                        сом)</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer product-modal-footer">
+          <div class="product-modal-total">
+            <span class="modal-sum-title">Сумма:</span>
+            <span>15.00 сом</span>
+          </div>
+          <div class="product-modal-btns">
+            <div class="aside-qty-btns d-flex align-items-center">
+              <button class="btn es-decrement">-</button>
+              <span>1</span>
+              <button class="btn es-increment">+</button>
+            </div>
+            <button class="modal-product-add-btn btn">Добавить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="phoneNumber" tabindex="-1" role="dialog" aria-labelledby="phoneNumberTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content es-modal-content-container">
+        <div class="es-modal-header modal-header position-relative">
+          <img src="img/footer-logo.svg" alt="">
+          <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
+            <img src="img/exit.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="position-relative es-modal-input-container">
+            <input type="text" class="es-modal-indput" placeholder="+992 __ __ __ __">
+            <img class="position-absolute modal-ic" src="img/call-calling.svg" alt="">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn modal-footer-btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="restoransMapModal" tabindex="-1" role="dialog" aria-labelledby="restoransMapModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content es-modal-content-container w-100">
+        <div class="modal-header d-flex flex-column pb-0">
+          <h3 class="es-sub-header m-0 mb-2">
+            Гункан спайси эби
+          </h3>
+          <p class="mb-0">Укажите на карте или выберите вручную</p>
+          <button class="btn es-product-modal-exit-btn position-absolute" data-dismiss="modal">
+            <img src="img/exit.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="es-ptb-30">
+            <form class="es-search-container w-100">
+              <img src="img/ic-search.svg" alt="">
+              <input type="search" placeholder="Поиск ресторанов и блюд">
+              <button class="es-search-btn">Найти</button>
+            </form>
+          </div>
+          <div style="width: 100%"><iframe style="border-radius: 10px" width="100%" height="374" frameborder="0"
+              scrolling="no" marginheight="0" marginwidth="0"
+              src="https://maps.google.com/maps?width=860&amp;height=300&amp;hl=en&amp;q=tashkent+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="mobRestoransMapModal" tabindex="-1" role="dialog"
+    aria-labelledby="mobRestoransMapModalTitle" aria-hidden="true">
+    <div class="modal-dialog m-0">
+      <div class="modal-content mob-modal-content-container w-100">
+        <div class="modal-body p-0 overflow-hidden">
+          <button type="button" class="mob-map-exit-btn btn" data-dismiss="modal" aria-label="Close">
+            <img src="img/exit-black.svg" alt="">
+          </button>
+          <div style="width: 100%; height: 100%"><iframe width="100%" height="100%" frameborder="0" scrolling="no"
+              marginheight="0" marginwidth="0"
+              src="https://maps.google.com/maps?width=860&amp;height=300&amp;hl=en&amp;q=tashkent+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe>
+          </div>
+          <button class="btn map-location-btn">
+            <img src="img/ic-location.svg" alt="">
+          </button>
+          <div class="mob-map-modal-btns">
+            <button class="btn mob-map-btn map-main-bg">Вручную</button>
+            <button class="btn mob-map-btn map-main-color">Подтвердить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="rateService" tabindex="-1" aria-labelledby="rateServiceLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content es-modal-content-container">
+        <div class="modal-body es-ptb-78 es-plr-120 rating-container position-relative">
+          <button class="btn es-product-modal-exit-btn position-absolute" data-dismiss="modal">
+            <img src="img/exit.svg" alt="">
+          </button>
+          <h3 class="es-sub-header text-center mb-2">Оцените качество сервиса?</h3>
+          <p class="text-center mb-0">Нам важно узнать Ваше мнение. Это поможет нам <br>
+            в дальнейшем развитии!</p>
+          <div class="es-rating-buttons">
+            <button class="btn es-rating-btn like-btn"><img src="img/like-white.svg" alt=""></button>
+            <button class="btn es-rating-btn dislike-btn"><img src="img/dislike.svg" alt=""></button>
+          </div>
+          <button class="btn es-rating-result">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="restourantInfoModal" tabindex="-1" aria-labelledby="restourantInfoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content mob-animate-bottom animate-bottom">
+        <div class="modal-header">
+          <h3 class="es-banner-info-header">Якитория</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img class="close-img" src="img/exit-black.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+
+            <p class="banner-dropdown-desc">
+              Сеть культовых ресторанов авторской японской кухни…
+            </p>
+            <div class="banner-dropdown-row">
+              <span class="property">Адрес:</span>&nbsp;&nbsp;&nbsp;
+              <span class="value">Н.Махсум 77/5 А</span>
+            </div>
+            <div class="banner-dropdown-row">
+              <span class="property">Доставка:</span>&nbsp;&nbsp;&nbsp;
+              <span class="value">от 5 сом</span>
+            </div>
+            <div class="banner-dropdown-row">
+              <span class="property">Мин. заказ:</span>&nbsp;&nbsp;&nbsp;
+              <span class="value">от 30 сом</span>
+            </div>
+            <div class="banner-dropdown-row border-0">
+              <span class="property">Режим работы:</span>&nbsp;&nbsp;&nbsp;
+              <span class="value">с 8:00 до 22:00</span>
+            </div>
+          </div>
+        </div>"mob-previous-table
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js" type="text/javascript"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
