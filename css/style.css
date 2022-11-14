@@ -2545,4 +2545,8 @@ input[type="radio"]:focus {
   .delivery-address-text{
     font-size: 1.125rem;
   }
+
+  .es-policy-header{
+    padding-top: 1.875rem;
+  }
 }
