@@ -42,7 +42,7 @@ a:focus {
 
 .es-main-nav {
   background-color: #fff;
-  height: 6.25rem;  
+  height: 6.25rem;
   border-bottom: 1px solid #EDEDED;
 }
 
@@ -536,7 +536,7 @@ a:focus {
   border-radius: 1.25rem;
 }
 
-.favourite-img{
+.favourite-img {
   width: 100%;
 }
 
@@ -591,15 +591,15 @@ a:focus {
   flex-direction: column;
 }
 
-.confirmed-order-content h4{
+.confirmed-order-content h4 {
   margin-top: 1.5rem;
 }
 
-.confirmed-order-text{
+.confirmed-order-text {
   font-size: 1.25rem;
 }
 
-.confirmed-order-id{
+.confirmed-order-id {
   color: var(--main-color);
 }
 
@@ -1896,7 +1896,7 @@ input[type="radio"]:focus {
   display: none;
 }
 
-.mob-previous-table{
+.mob-previous-table {
   display: none;
 }
 
@@ -2317,7 +2317,7 @@ input[type="radio"]:focus {
     margin-bottom: 1.875rem !important;
   }
 
-  .checkout-table-header{
+  .checkout-table-header {
     margin-bottom: 0 !important;
   }
 
@@ -2442,47 +2442,65 @@ input[type="radio"]:focus {
     margin: -15px;
     padding: 0 1.25rem;
   }
-  .mob-previous-order{
+
+  .mob-previous-order {
     padding: 1.875rem;
     border-bottom: 1px solid var(--main-bg);
   }
-  .favourite-section{
+
+  .favourite-section {
     margin-top: 6.125rem;
   }
-  .favourities-pl{
+
+  .favourities-pl {
     padding: 0;
     margin-left: -5px;
     margin-bottom: .625rem;
   }
-  .favourite-section h2{
+
+  .favourite-section h2 {
     margin-bottom: 1.875rem;
   }
-  .es-restorant-favourites .favourities-pl{
+
+  .es-restorant-favourites .favourities-pl {
     font-size: 1.25rem;
   }
-  .es-sub-header{
+
+  .es-sub-header {
     margin-bottom: 1.25rem;
   }
-  .checkout-section-p{
+
+  .checkout-section-p {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
-  .confirmed-order-content .es-sub-header{
+
+  .confirmed-order-content .es-sub-header {
     font-size: 1.25rem;
   }
-  .confirmed-order-text{
+
+  .confirmed-order-text {
     font-size: 1.125rem;
   }
-  .about-header{
+
+  .about-header {
     padding-top: 1.875rem;
   }
-  .es-info-text-content{
+
+  .es-info-text-content {
     margin-bottom: 1.875rem;
   }
-  .es-about-container{
+
+  .es-about-container {
     margin-bottom: 3.125rem;
   }
-  .mob-br{
+
+  .mob-br {
     display: block;
+  }
+
+  .submit-application {
+    margin-top: 0;
+    margin-bottom: 1.875rem;
   }
 }
