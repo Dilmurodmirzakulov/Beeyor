@@ -1900,6 +1900,10 @@ input[type="radio"]:focus {
   display: none;
 }
 
+.finished-orders-logo-text{
+  font-size: 1.125rem;
+  font-weight: 500;
+}
 
 @keyframes animatebottom {
   from {
@@ -2439,7 +2443,7 @@ input[type="radio"]:focus {
   .mob-previous-table {
     display: block;
     background-color: #fff;
-    margin: -15px;
+    margin: 0 -15px;
     padding: 0 1.25rem;
   }
 
@@ -2502,5 +2506,17 @@ input[type="radio"]:focus {
   .submit-application {
     margin-top: 0;
     margin-bottom: 1.875rem;
+  }
+
+  .finished-orders-header{
+    padding-top: 1.875rem;
+  }
+  
+  .es-personal-info{
+    margin-bottom: 3.125rem;
+  }
+
+  .es-finished-orders-wrapper{
+    margin-bottom: 3.125rem;
   }
 }
