@@ -27,20 +27,16 @@
                         <a class="navbar-brand" href="#">
                             <img src="img/main-nav-logo.svg" alt="Beeyor">
                         </a>
-                        <button class="es-nav-padding navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
                         <form class="es-search-container">
                             <img src="img/ic-search.svg" alt="">
                             <input type="search" placeholder="Поиск ресторанов и блюд">
                             <button class="es-search-btn">Найти</button>
                         </form>
-                        <div class="es-nav-location my-2 my-lg-0 d-flex align-items-center">
+                        <button class="btn es-nav-location my-2 my-lg-0 d-flex align-items-center" type="button"
+                            data-target="#restoransMapModal" data-toggle="modal">
                             <img class="mr-1" src="img/ic-location.svg" alt="">
-                            <p class="mb-0">Ул. Лохути</p>
-                        </div>
+                            <p class="mb-0">Ул.&nbsp;Лохути</p>
+                        </button>
                     </div>
                     <div class="d-flex">
                         <div class="es-nav-number-container d-flex align-items-center">
@@ -61,31 +57,53 @@
                                 </div>
                             </li>
                             <li class="nav-item mr-4">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="restorans-page.html">
                                     <span class="nav-icon">
                                         <img alt="Search" src="img/ic-shopping-cart.svg">
                                     </span>
                                 </a>
                             </li>
-
                             <li class="nav-item mr-4">
-                                <a class="nav-link" data-target="#authModal" data-toggle="modal" href="#"
-                                    title="Профиль">
+                                <a class="nav-link" href="favourite.html" title="Профиль" data-target="#rateService"
+                                    data-toggle="modal">
                                     <span class="nav-icon">
-                                        <img alt="Профиль" src="img/heart.svg">
+                                        <img alt="favourite" src="img/heart.svg">
                                     </span>
                                 </a>
                             </li>
                             <li class="nav-item es-cart-block">
-                                <a class="nav-link" href="#">
+                                <button class="nav-link btn" data-target="#enterProfile" data-toggle="modal"
+                                    type="button">
                                     <span class="nav-icon">
                                         <img alt="Cart" src="img/ic-profile.svg">
                                     </span>
                                     <span class="badge badge-cart"></span>
-                                </a>
+                                </button>
                             </li>
+
                         </ul>
                     </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="main-mobile-nav">
+            <div class="container">
+                <div class="main-mobile-nav-wrapper d-flex justify-content-between">
+                    <button class="btn"><img src="img/search-black.svg" alt=""></button>
+                    <a class="dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="mr-2" src="img/ic-globe.svg" alt="">
+                        <p class="mb-0">Рус</p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">O'zbekcha</a>
+                        <a class="dropdown-item" href="#">English</a>
+                    </div>
+                    <button class="btn es-nav-location d-flex align-items-center" type="button"
+                        data-target="#mobRestoransMapModal" data-toggle="modal">
+                        <img class="mr-1" src="img/ic-location.svg" alt="">
+                        <p class="mb-0">Ул. Лохути</p>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -96,11 +114,11 @@
             <h2 class="es-section-header favourities-pl">Избранное</h2>
             <div class="es-restorant-favourites">
                 <h4 class="es-sub-header favourities-pl">Ресторан “Якитория”</h4>
-                <div class="favourite-products-list">
-                    <div class="favourite-product-wrapper">
+                <div class="favourite-products-list row">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -120,10 +138,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -143,10 +161,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -166,10 +184,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -189,10 +207,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -212,10 +230,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -235,10 +253,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favourite-product.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -262,11 +280,11 @@
             </div>
             <div class="es-restorant-favourites fevourities-second-list">
                 <h4 class="es-sub-header favourities-pl">Ресторан “Лагман Хаус”</h4>
-                <div class="favourite-products-list">
-                    <div class="favourite-product-wrapper">
+                <div class="favourite-products-list row">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -286,10 +304,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -309,10 +327,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -332,10 +350,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -355,10 +373,56 @@
                             </div>
                         </div>
                     </div>
-                    <div class="favourite-product-wrapper">
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
                         <div class="favourite-product">
                             <div class="favourite-img position-relative">
-                                <img class="img-fluid" src="img/favouritie-product2.svg" alt="">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
+                                <button class="es-liked-img position-absolute">
+                                    <img src="img/heart-full.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="favourite-product-info">
+                                <div class="favourite-product-title">
+                                    Гункан спайси унаги
+                                </div>
+                                <div class="favourite-product-price">
+                                    15.00 сом
+                                </div>
+                                <div class="favourite-product-qty d-flex align-items-center justify-content-center">
+                                    <button class="es-plus btn">+</button>
+                                    <span>1</span>
+                                    <button class="es-minus btn">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="favourite-product-wrapper col-lg-2 col-md-4 col-6">
+                        <div class="favourite-product">
+                            <div class="favourite-img position-relative">
+                                <img class="w-100" src="img/favourite-product.svg" alt="">
                                 <button class="es-liked-img position-absolute">
                                     <img src="img/heart-full.svg" alt="">
                                 </button>
@@ -394,7 +458,7 @@
                     <img src="img/play-market.svg" alt="">
                 </div>
             </div>
-            <div class="footer-main-part">
+            <div class="footer-main-part flex-wrap">
                 <div class="es-footer-part">
                     <h4 class="es-sub-header">Часто смотрят</h4>
                     <div class="footer-lists-container">
@@ -421,12 +485,12 @@
                 <div class="es-footer-part">
                     <h4 class="es-sub-header text-right">Часто смотрят</h4>
                     <ul class="footer-list list-unstyled text-right">
-                        <li class="footer-list-item"><a href="#">О нас</a></li>
-                        <li class="footer-list-item"><a href="#">Рестораны</a></li>
-                        <li class="footer-list-item"><a href="#">Политика конфиденциальности</a></li>
-                        <li class="footer-list-item"><a href="#">Правила пользования</a></li>
-                        <li class="footer-list-item"><a href="#">Стать курьером</a></li>
-                        <li class="footer-list-item"><a href="#">Стать партнером</a></li>
+                        <li class="footer-list-item"><a href="about.html">О нас</a></li>
+                        <li class="footer-list-item"><a href="info-restorans.html">Рестораны</a></li>
+                        <li class="footer-list-item"><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+                        <li class="footer-list-item"><a href="terms-of-use.html">Правила пользования</a></li>
+                        <li class="footer-list-item"><a href="carrier.html">Стать курьером</a></li>
+                        <li class="footer-list-item"><a href="coworking.html">Стать партнером</a></li>
                     </ul>
                 </div>
             </div>
@@ -434,19 +498,41 @@
     </footer>
     <footer class="second-footer">
         <div class="container">
-            <div class="row w-100 d-flex justify-content-between m-0">
-                <div class="col-5 p-0">©2022 beeyor. Все права защищены.</div>
-                <div class="col-2 d-flex justify-content-around">
+            <div class="second-footer-wrapper row w-100 d-flex justify-content-between m-0">
+                <div class="second-footer-row col-lg-5 p-lg-0">©2022 beeyor. Все права защищены.</div>
+                <div class="second-footer-row footer-media col-lg-2 d-flex justify-content-around">
                     <a href="#"><img src="img/ic-facebook.svg" alt=""></a>
                     <a href="#"><img src="img/ic-telegram.svg" alt=""></a>
                     <a href="#"><img src="img/ic-instagram.svg" alt=""></a>
                 </div>
-                <div class="col-5 p-0 text-right">
-                    Сайт разработан в <a href="#"><u>Zetta Online</u></a>
+                <div class="second-footer-row col-lg-5 p-lg-0 text-right">
+                    <span>Сайт разработан в</span> <a href="#"><u>Zetta Online</u></a>
                 </div>
             </div>
         </div>
     </footer>
+    <nav class="mob-fixed-bottom-nav position-fixed w-100">
+        <div class="container">
+            <div class="mob-fixed-nav d-flex justify-content-between">
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/home-2.svg" alt="">
+                    <p class="m-0">Главная</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/ic-shopping-cart.svg" alt="">
+                    <p class="m-0">Корзина</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/heart.svg" alt="">
+                    <p class="m-0">Избранное</p>
+                </a>
+                <a class="d-flex flex-column align-items-center" href="#">
+                    <img src="img/ic-profile.svg" alt="">
+                    <p class="m-0">Аккаунт</p>
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <a href="#top" id="back-top">
         <img alt="To Top" src="img/ic_top.svg" />

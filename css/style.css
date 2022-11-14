@@ -513,10 +513,7 @@ a:focus {
 }
 
 .favourite-product-wrapper {
-  width: 100%;
-  max-width: 200px;
   padding: .625rem;
-  min-width: 150px;
 }
 
 .es-liked-img {
@@ -536,6 +533,10 @@ a:focus {
   padding: .625rem;
   background-color: #fff;
   border-radius: 1.25rem;
+}
+
+.favourite-img{
+  width: 100%;
 }
 
 .favourite-product-title {
@@ -2421,5 +2422,19 @@ input[type="radio"]:focus {
   .mob-previous-order{
     padding: 1.875rem;
     border-bottom: 1px solid var(--main-bg);
+  }
+  .favourite-section{
+    margin-top: 6.125rem;
+  }
+  .favourities-pl{
+    padding: 0;
+    margin-left: -5px;
+    margin-bottom: .625rem;
+  }
+  .favourite-section h2{
+    margin-bottom: 1.875rem;
+  }
+  .es-restorant-favourites .favourities-pl{
+    font-size: 1.25rem;
   }
 }
