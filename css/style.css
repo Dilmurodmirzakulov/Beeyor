@@ -1900,6 +1900,7 @@ input[type="radio"]:focus {
   display: none;
 }
 
+
 @keyframes animatebottom {
   from {
     bottom: -300px;
@@ -2471,5 +2472,17 @@ input[type="radio"]:focus {
   }
   .confirmed-order-text{
     font-size: 1.125rem;
+  }
+  .about-header{
+    padding-top: 1.875rem;
+  }
+  .es-info-text-content{
+    margin-bottom: 1.875rem;
+  }
+  .es-about-container{
+    margin-bottom: 3.125rem;
+  }
+  .mob-br{
+    display: block;
   }
 }
