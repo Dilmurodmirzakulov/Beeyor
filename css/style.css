@@ -2043,6 +2043,7 @@ input[type="radio"]:focus {
   .app-download-container {
     display: flex;
     width: 100%;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -2066,6 +2067,7 @@ input[type="radio"]:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
     padding: .625rem 0;
   }
