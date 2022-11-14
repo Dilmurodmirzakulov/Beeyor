@@ -42,7 +42,8 @@ a:focus {
 
 .es-main-nav {
   background-color: #fff;
-  height: 6.25rem
+  height: 6.25rem;  
+  border-bottom: 1px solid #EDEDED;
 }
 
 .es-search-container {
@@ -1044,6 +1045,7 @@ a:focus {
   padding: 1rem 1.25rem 1rem 1.1rem;
   width: max-content;
   border-radius: .625rem;
+  margin-right: -.625rem;
 }
 
 .aside-nav-list {
@@ -1422,7 +1424,7 @@ textarea {
   background-color: #fff;
 }
 
-.es-ptb-40 {
+.checkout-section-p {
   padding: 2rem .5rem;
   border-radius: 1.875rem;
 }
@@ -1725,6 +1727,8 @@ input[type="radio"]:focus {
 .main-mobile-nav {
   display: none;
   background-color: #FFF;
+  border-bottom: 1px solid #EDEDED;
+
 }
 
 .main-mobile-nav-wrapper {
@@ -1750,6 +1754,7 @@ input[type="radio"]:focus {
   display: flex;
   align-items: center;
   overflow-x: auto;
+  padding-top: 5px;
 }
 
 .mob-category-list {
@@ -2298,6 +2303,10 @@ input[type="radio"]:focus {
     margin-bottom: 1.875rem !important;
   }
 
+  .checkout-table-header{
+    margin-bottom: 0 !important;
+  }
+
   .checkout-table {
     display: none;
   }
@@ -2436,5 +2445,12 @@ input[type="radio"]:focus {
   }
   .es-restorant-favourites .favourities-pl{
     font-size: 1.25rem;
+  }
+  .es-sub-header{
+    margin-bottom: 1.25rem;
+  }
+  .checkout-section-p{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }
